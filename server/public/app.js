@@ -1,4 +1,4 @@
-const socket = io('https://chatapp-utq4.onrender.com');
+const socket = io('https://chatapp-kvis.onrender.com');
 
 
 const msgInput = document.querySelector('#message');
