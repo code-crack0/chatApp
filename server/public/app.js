@@ -1,4 +1,4 @@
-const socket = io('ws://localhost:3500');
+const socket = io('https://chatapp-utq4.onrender.com');
 
 
 const msgInput = document.querySelector('#message');
@@ -74,7 +74,7 @@ socket.on('usersList', ({users}) => {
 socket.on('roomList', ({rooms}) => {
     showRooms(rooms);
 }
-);
+);  
 function showUsers(users){
     usersList.textContent = '';
     if(users){
