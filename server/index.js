@@ -24,7 +24,7 @@ const UsersState = {
 }
 const io = new Server(expressServer , {
     cors: {
-        origin: process.env.NODE_ENV === 'production' ? false : ['http://localhost:5500', 'http://localhost:3001','http://127.0.0.1:5500'],
+        origin: process.env.NODE_ENV === 'production' ? false : ['http://localhost:5500', 'http://localhost:3001','http://127.0.0.1:5500','https://chatapp-kvis.onrender.com/'],
     }
 });
 
