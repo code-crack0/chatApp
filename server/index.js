@@ -53,6 +53,13 @@ io.on('connection', (socket) => {
             // to everyone else
             socket.broadcast.to(user.room).emit('message',buildMsg(ADMIN,`${user.name} has joined the room`));
         }
+        else{
+            socket.join(user.room);
+            // to user who joined the room
+            socket.emit('message',buildMsg(ADMIN,`You have joined the ${user.room} chat room`));
+            // to everyone else
+            socket.broadcast.to(user.room).emit('message',buildMsg(ADMIN,`${user.name} has joined the room`));
+        }
         // Update user list for the room
         io.to(user.room).emit('usersList',{
             users: getUsersInRoom(user.room)
